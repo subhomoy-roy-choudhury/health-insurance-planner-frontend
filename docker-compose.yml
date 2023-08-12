@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  app:
+    container_name: health_insurance_planner_frontend
+    image: health_insurance_planner_frontend
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3001:3000
